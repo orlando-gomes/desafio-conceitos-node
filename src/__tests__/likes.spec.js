@@ -6,7 +6,7 @@ describe("Likes", () => {
     const response = {body: true};
     expect(response.body).toBe(true);
   });
-
+  
   it("should be able to give a like to the repository", async () => {
     const repository = await request(app)
       .post("/repositories")

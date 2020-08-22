@@ -1,12 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 
-<<<<<<< HEAD
-// const { v4: uuid } = require('uuid');
-=======
 const { v4: uuidv4 } = require('uuid');
 const { isUuid } = require("uuidv4");
->>>>>>> Primeiro commit
 
 const app = express();
 
@@ -15,26 +11,6 @@ app.use(cors());
 
 const repositories = [];
 
-<<<<<<< HEAD
-app.get("/repositories", (request, response) => {
-  // TODO
-});
-
-app.post("/repositories", (request, response) => {
-  // TODO
-});
-
-app.put("/repositories/:id", (request, response) => {
-  // TODO
-});
-
-app.delete("/repositories/:id", (request, response) => {
-  // TODO
-});
-
-app.post("/repositories/:id/like", (request, response) => {
-  // TODO
-=======
 function validateId(request, response, next) {
   const {id} = request.params;
   
@@ -117,7 +93,6 @@ app.post("/repositories/:id/like", (request, response) => {
   repositories[index].likes+=1;
 
   return response.json({likes: repositories[index].likes});
->>>>>>> Primeiro commit
 });
 
 module.exports = app;
