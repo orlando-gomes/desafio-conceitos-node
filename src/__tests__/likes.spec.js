@@ -2,6 +2,11 @@ const request = require("supertest");
 const app = require("../app");
 
 describe("Likes", () => {
+  it("should be able to execute a simple test", async () => {
+    const response = {body: true};
+    expect(response.body).toBe(true);
+  });
+
   it("should be able to give a like to the repository", async () => {
     const repository = await request(app)
       .post("/repositories")
@@ -33,4 +38,10 @@ describe("Likes", () => {
       .post(`/repositories/123/like`)
       .expect(400);
   });
+<<<<<<< HEAD
 });
+=======
+  
+});
+
+>>>>>>> Primeiro commit
