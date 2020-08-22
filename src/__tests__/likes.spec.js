@@ -38,10 +38,6 @@ describe("Likes", () => {
       .post(`/repositories/123/like`)
       .expect(400);
   });
-<<<<<<< HEAD
-});
-=======
   
 });
 
->>>>>>> Primeiro commit
